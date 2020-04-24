@@ -18,7 +18,10 @@ myFunction();
 
 // Explanation: 
 
+nested function is an inner function, and is only available within myFunction, so it has access to the variable that belongs to the parent variable.
 
 /* Task 2: Counter */
 
 /* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation()

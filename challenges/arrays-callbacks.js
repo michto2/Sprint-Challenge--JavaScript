@@ -83,7 +83,6 @@ function consume(a, b, cb){
 
 function add(num1, num2, consume){
   return consume(num1, num2);
-  add(4, 4);
 }
 
 const consume = (num1, num2) => {
@@ -92,10 +91,41 @@ const consume = (num1, num2) => {
 
 console.log(add(4, 4, consume));
 
+function multiply(num1, num2, consume){
+  return consume(num1, num2);
+}
+
+const consume = (num1, num2) => {
+  return num1 * num2;
+}
+
+console.log(multiply(2, 4, consume));
+
+
+// function greeting(firstName, lastName, consume){
+//   return `Hello ${firstName} ${lastName}, nice to meet you`;
+// }
+
+// console.log(greeting(Michelle, To, consume));
+
+function consume(a,b){
+  console.log (`Hello ${firstName} ${lastName}, nice to meet you`);
+}
+
+function greeting(consume){
+  const firstName = 'Michelle';
+  const lastName = 'To';
+  consume(firstName, lastName);
+}
+
+greeting(consume);
+
+
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+ console.log(consume(2, 2, add)); // 4
+  console.log(consume(10, 16, multiply)); // 160
+ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
