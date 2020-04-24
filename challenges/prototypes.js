@@ -52,23 +52,20 @@ cube.areaOfCube();
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-function cuboid(attributes){
-  CuboidMaker.call(this, attributes)
-}
 
-cuboid.prototype = Object.create(CuboidMaker.prototype);
+// cuboid.prototype = Object.create(CuboidMaker.prototype);
 
-cuboid.prototype.properties = function(){
-  return this.length + this.width + this.height;
-}
+// cuboid.prototype.properties = function(){
+//   return this.length + this.width + this.height;
+// }
 
-const cuboidProperties = new CuboidMaker({
+const cube = new CuboidMaker({
   length: 4,
   width: 5,
   height: 5,
 })
 
-cuboidProperties.cuboid();
+
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100

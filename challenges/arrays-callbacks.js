@@ -39,7 +39,8 @@ const lowCaseAnimalNames = [];
 const newAnimalNames = zooAnimals.map(function(item){
   return item.animal_name.toLowerCase();
 });
-console.log(lowCaseAnimalNames);
+
+console.log(newAnimalNames);
 
 /* Request 3: .filter() 
 
@@ -72,7 +73,7 @@ console.log(populationTotal);
 */
 
 function consume(a, b, cb){
-  return consume(a, b);
+  return cb(a, b);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -102,23 +103,12 @@ const consume = (num1, num2) => {
 console.log(multiply(2, 4, consume));
 
 
-// function greeting(firstName, lastName, consume){
-//   return `Hello ${firstName} ${lastName}, nice to meet you`;
-// }
-
-// console.log(greeting(Michelle, To, consume));
-
-function consume(a,b){
-  console.log (`Hello ${firstName} ${lastName}, nice to meet you`);
+function greeting(firstName, lastName){
+  return `Hello ${firstName} ${lastName}, nice to meet you`;
 }
 
-function greeting(consume){
-  const firstName = 'Michelle';
-  const lastName = 'To';
-  consume(firstName, lastName);
-}
+console.log(consume('Michelle','To', greeting));
 
-greeting(consume);
 
 
 

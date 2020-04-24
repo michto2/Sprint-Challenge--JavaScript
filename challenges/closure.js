@@ -22,6 +22,17 @@ nested function is an inner function, and is only available within myFunction, s
 
 /* Task 2: Counter */
 
-/* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+/* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. 
+For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
 
-function sumation()
+
+
+function sumation(counter){
+  let num = 0;
+  for(let i = 0; i <= counter; i++){
+    num = i + num;
+  }
+  return num;
+}
+
+console.log(sumation(4))
